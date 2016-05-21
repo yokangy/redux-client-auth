@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
-import * as actions from '../../actions/index';
+import * as actions from '../../actions';
 
 class Signin extends Component {
   handleFormSubmit({ email, password }) {
