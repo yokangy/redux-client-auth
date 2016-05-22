@@ -14,6 +14,10 @@ export function signinUser({ email, password }) {
     axios.post(`${ROOT_URL}/signin`, { email, password })
       .then(response => {
         // If request is good
+        dispatch({ 
+          type: AUTH_ERROR,
+          payload: null
+        })
         // Update state to indicate user is authenticated
         dispatch({ type: AUTH_USER });
         // Save JWT
